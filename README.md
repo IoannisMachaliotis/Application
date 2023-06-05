@@ -6,6 +6,6 @@ To run the App:
 
 • Open a Terminal
 
-• Clone the repo (git clone -R <url>)
+• Clone the repo (git clone -R <[url](https://github.com/IoannisMachaliotis/Application.git)>)
   
 • sudo sh AppRun.sh
