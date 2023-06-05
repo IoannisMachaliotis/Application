@@ -8,4 +8,5 @@ To run the App:
 
 • Clone the repo (git clone -R https://github.com/IoannisMachaliotis/Application.git )
   
-• sudo sh AppRun.sh
+• Inside src folder: 
+    sudo sh ../AppRun.sh
