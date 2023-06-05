@@ -8,9 +8,7 @@ To run the App:
 
 • Clone the repo (git clone  --recursive https://github.com/IoannisMachaliotis/Application.git )
   
-• Inside /src folder: 
-    
-    type:
+• Inside /src folder type: 
     
     sudo sh ../AppRun.sh
 
