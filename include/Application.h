@@ -5,7 +5,6 @@
 
 #pragma once
 
-#include <iostream>
 #include <vector>
 #include <string>
 
@@ -13,7 +12,10 @@ class Application
 {
     public: 
     std::vector<std::string> InputStage(std::vector<std::string> &words);
+    std::vector<std::string> SortingStage(std::vector<std::string> &words);
+    std::vector<std::string> DuplicateRemovalStage(std::vector<std::string> &words);
 
+    void OutputStage(std::vector<std::string> &words);
     void DisplayWords(std::vector<std::string> &words);
 
     private:

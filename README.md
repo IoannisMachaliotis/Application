@@ -1,5 +1,5 @@
 # Application
-short App
+Short App which handles a list of words for Sorting, Duplication, and Storage
 
 
 To run the App: 
@@ -10,3 +10,7 @@ To run the App:
   
 • Inside src folder: 
     sudo sh ../AppRun.sh
+
+• Hit Enter and follow the instructions
+
+# Thank you!
