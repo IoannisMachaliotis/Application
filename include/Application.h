@@ -16,7 +16,6 @@ class Application
     std::vector<std::string> DuplicateRemovalStage(std::vector<std::string> &words);
 
     void OutputStage(std::vector<std::string> &words);
-    void DisplayWords(std::vector<std::string> &words);
 
     private:
     std::string word;
