@@ -10,10 +10,7 @@ int main(int argc, char** argv)
     // Create the input words [with OOP]
     Application App;
     App.InputStage(words);
-
-    // // Create the input words [without OOP]
-    // InputStage(words);
-
+    
     // Sorting Stage
     App.SortingStage(words);
 

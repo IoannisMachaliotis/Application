@@ -6,7 +6,7 @@ To run the App:
 
 • Open a Terminal on a linux environment
 
-• Clone the repo (git clone  --recursive https://github.com/IoannisMachaliotis/Application.git )
+• Clone the repo's master branch (git clone  --recursive https://github.com/IoannisMachaliotis/Application.git )
   
 • Inside /src folder type: 
     
