@@ -12,87 +12,87 @@
 #include <algorithm>
 #include "../library/library.h"
 
-std::vector<std::string> Application::InputStage(std::vector<std::string> &words)
+std::vector<std::string> Application::InputStage(std::vector<std::string> &ioWords)
 {
     std::cout << "Enter a list of words (press Enter after each word, type 'done' to finish):\n";
     
-    std::string word;
+    std::string aWord;
 
     while (true)
     {
-        std::cin >> word;
+        std::cin >> aWord;
         
-        if (word == "done")
+        if (aWord == "done")
         {
             break;
         }
         
-        words.push_back(word);
+        ioWords.push_back(aWord);
     }
 
-    return words;
+    return ioWords;
 }
 
-std::vector<std::string> Application::SortingStage(std::vector<std::string> &words)
+std::vector<std::string> Application::SortingStage(std::vector<std::string> &ioWords)
 {
-    std::string sortOption;
+    std::string aSortOption;
     while (true) {
         std::cout << "Type 'asc' for ascending or 'desc' descending order.\n";
-        std::cin >> sortOption;
+        std::cin >> aSortOption;
 
-        if (sortOption == "asc" || sortOption == "desc") {
+        if (aSortOption == "asc" || aSortOption == "desc") {
             break;
         }
         std::cout << "Invalid sort option. Please choose either 'asc' or 'desc'.\n";
     }
 
-    if (sortOption == "asc")
+    if (aSortOption == "asc")
     {
-        std::sort(words.begin(), words.end());
+        std::sort(ioWords.begin(), ioWords.end());
     }
-    else if (sortOption == "desc")
+    else if (aSortOption == "desc")
     {
-        std::sort(words.rbegin(), words.rend());
+        std::sort(ioWords.rbegin(), ioWords.rend());
     }
     else 
     {
         std::cout << "Invalid sort option. Please choose either 'asc' or 'desc'.\n";
     }
-    return words;
+    return ioWords;
 }
 
 // Remove duplicates if requested
-std::vector<std::string> Application::DuplicateRemovalStage(std::vector<std::string> &words)
+std::vector<std::string> Application::DuplicateRemovalStage(std::vector<std::string> &ioWords)
 {
-    std::string removeDuplicatesOption;
+    std::string aRemoveDuplicatesOption;
     while (true)
     {
         std::cout << "Remove duplicates? ('y' for yes or 'n' for no): ";
-        std::cin >> removeDuplicatesOption;
+        std::cin >> aRemoveDuplicatesOption;
 
-        if (removeDuplicatesOption == "y" || removeDuplicatesOption == "n") {
+        if (aRemoveDuplicatesOption == "y" || aRemoveDuplicatesOption == "n") {
             break;
         }
 
         std::cout << "Invalid option. Please choose either 'y' or 'n'.\n";
     }
 
-    if (removeDuplicatesOption == "y")
+    if (aRemoveDuplicatesOption == "y")
     {
-        library::removeDuplicates(words);
+        library::removeDuplicates(ioWords);
     }
-    return words;
+    return ioWords;
 }
 
-void Application::OutputStage(std::vector<std::string> &words)
+void Application::OutputStage(std::vector<std::string> &iWords)
 {
-    std::string saveOption;
+    std::string aSaveOption;
     while (true)
     {
         std::cout << "Display or save the result? (display or save): ";
-        std::cin >> saveOption;
+        std::cin >> aSaveOption;
 
-        if (saveOption == "display" || saveOption == "save")
+        if (aSaveOption == "display" || aSaveOption == "save")
         {
             break;
         }
@@ -100,15 +100,15 @@ void Application::OutputStage(std::vector<std::string> &words)
         std::cout << "Invalid option. Please choose either 'display' or 'save'.\n";
     }
 
-    if (saveOption == "save")
+    if (aSaveOption == "save")
     {
-        std::string filename;
+        std::string aFilename;
         std::cout << "Enter the filename to save the result: ";
-        std::cin >> filename;
-        library::saveWords(words, filename);
+        std::cin >> aFilename;
+        library::saveWords(iWords, aFilename);
     }
     else
     {
-        library::displayWords(words);
+        library::displayWords(iWords);
     }
 }
