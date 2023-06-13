@@ -16,33 +16,54 @@
 namespace library
 {
 
-void displayWords(std::vector<std::string> &words)
+void displayWords(std::vector<std::string> &iWords)
 {
     std::cout << "\n---------- List of words: ----------\n";
-    for (const std::string& word : words)
+    for (const std::string& aWord : iWords)
     {
-        std::cout << word << "\n";
+        std::cout << aWord << "\n";
     }
 }
 
-void removeDuplicates(std::vector<std::string>& words)
+void removeDuplicates(std::vector<std::string>& iWords)
 {
-    std::unordered_set<std::string> uniqueWords(words.begin(), words.end());
-    words.assign(uniqueWords.begin(), uniqueWords.end());
+    std::unordered_set<std::string> uniqueWords(iWords.begin(), iWords.end());
+    iWords.assign(uniqueWords.begin(), uniqueWords.end());
 }
 
-void saveWords(const std::vector<std::string>& words, const std::string& filename)
+void saveWords(const std::vector<std::string>& iWords, const std::string& iFilename)
 {
-    std::ofstream outputFile(filename);
-    if (outputFile.is_open()) {
-        for (const auto& word : words) {
-            outputFile << word << "\n";
+    std::ofstream aOutputFile(iFilename);
+    if (aOutputFile.is_open()) {
+        for (const std::string& aWord : iWords) {
+            aOutputFile << aWord << "\n";
         }
-        outputFile.close();
-        std::cout << "Result saved to " << filename << "\n";
+        aOutputFile.close();
+        std::cout << "Result saved to " << iFilename << "\n";
+
+        std::string aOpenOption;
+        while (true)
+        {
+            std::cout << "Do you want to open the file? ('y' for yes or 'n' for no): ";
+            std::cin >> aOpenOption;
+
+            if (aOpenOption == "y")
+            {
+                std::string aOpenCommand = "open " + iFilename; // Adjust command for Windows or Linux
+                std::system(aOpenCommand.c_str());
+                break;
+            }
+            else if (aOpenOption == "n")
+            {
+                break;
+            }
+
+            std::cout << "Invalid option. Please choose either 'y' or 'n'.\n";
+        }
     } else {
         std::cout << "Unable to open file for writing.\n";
     }
+
 }
 
 } // library

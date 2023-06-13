@@ -6,19 +6,19 @@
 
 int main(int argc, char** argv)
 {
-    std::vector<std::string> words;
-    // Create the input words [with OOP]
+    std::vector<std::string> aWords;
+    // Create the input aWords [with OOP]
     Application App;
-    App.InputStage(words);
+    App.InputStage(aWords);
     
     // Sorting Stage
-    App.SortingStage(words);
+    App.SortingStage(aWords);
 
     // Duplicates Stage
-    App.DuplicateRemovalStage(words);
+    App.DuplicateRemovalStage(aWords);
 
     // Ouput Stage
-    App.OutputStage(words);
+    App.OutputStage(aWords);
 
     return 0;
 }

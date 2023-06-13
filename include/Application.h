@@ -11,13 +11,13 @@
 class Application
 {
     public: 
-    std::vector<std::string> InputStage(std::vector<std::string> &words);
-    std::vector<std::string> SortingStage(std::vector<std::string> &words);
-    std::vector<std::string> DuplicateRemovalStage(std::vector<std::string> &words);
+    std::vector<std::string> InputStage(std::vector<std::string> &ioWords);
+    std::vector<std::string> SortingStage(std::vector<std::string> &ioWords);
+    std::vector<std::string> DuplicateRemovalStage(std::vector<std::string> &ioWords);
 
-    void OutputStage(std::vector<std::string> &words);
+    void OutputStage(std::vector<std::string> &iWords);
 
     private:
-    std::string word;
-    std::vector<std::string> words;
+    std::string _word;
+    std::vector<std::string> _words;
 };
